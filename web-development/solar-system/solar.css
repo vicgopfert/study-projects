@@ -9,14 +9,14 @@ body {
 }
 .container {
     font-size: 10px;
-    width: 60em; /* Increased container size to accommodate larger orbits */
-    height: 60em; /* Increased container size to accommodate larger orbits */
+    width: 60em; 
+    height: 60em; 
     position: relative;
 }
 .sun {
     position: absolute;
-    top: 25em; /* Adjusted to center the sun in the larger container */
-    left: 25em; /* Adjusted to center the sun in the larger container */
+    top: 25em; 
+    left: 25em; 
     width: 10em;
     height: 10em;
     background-color: yellow;
@@ -45,10 +45,10 @@ body {
     animation: orbit 2.7s linear infinite;
 }
 .mars {
-    top: 2em; /* Adjusted to increase the distance from Earth */
-    left: 2em; /* Adjusted to increase the distance from Earth */
-    width: 50em; /* Increased the size of Mars's orbit */
-    height: 50em; /* Increased the size of Mars's orbit */
+    top: 2em; 
+    left: 2em; 
+    width: 50em; 
+    height: 50em; 
     animation: orbit 68.7s linear infinite;
 }
 .earth::before, .moon::before, .mars::before {
@@ -71,8 +71,8 @@ body {
     background-color: silver;
 }
 .mars::before {
-    top: 24em; /* Adjusted to align Mars in the center of its larger orbit */
-    right: 24em; /* Adjusted to align Mars in the center of its larger orbit */
+    top: 24em; 
+    right: 24em; 
     width: 2em;
     height: 2em;
     background-color: red;
