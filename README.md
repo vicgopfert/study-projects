@@ -5,4 +5,5 @@ Este repositório contém vários mini projetos e exercícios que desenvolvi enq
 ## Projetos e Exercícios
 - [Exercícios de Python](python-exercises/)
 - [Mini Projetos em C](c-language/)
+- [Projetos de Desenvolvimento Web](web-development/)
 
