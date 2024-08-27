@@ -1,4 +1,4 @@
-# Mini Projetos e Exercícios de Estudo
+# Projetos e Exercícios de Estudo
 
 Este repositório contém vários mini projetos e exercícios que desenvolvi enquanto aprendia diferentes tecnologias.
 
