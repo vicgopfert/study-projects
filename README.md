@@ -8,7 +8,7 @@ Este repositório contém vários mini projetos e exercícios que desenvolvi enq
 - [Projetos de Desenvolvimento Web](web-development/)
 - [Projetos de Análise de Dados](data-analysis/)
 
-- # Projetos e Exercícios de Estudo
+# Projetos e Exercícios de Estudo
 
 Bem-vindo ao meu repositório de estudos! Este espaço contém uma coleção de mini projetos e exercícios que desenvolvi ao longo da minha jornada de aprendizado em diversas tecnologias. Cada projeto busca explorar diferentes conceitos e práticas, ajudando-me a consolidar meu conhecimento em programação e análise de dados.
 
@@ -21,7 +21,7 @@ Aqui você encontrará uma série de exercícios focados em aprimorar minhas hab
 - Programação orientada a objetos (POO)
 - Desenvolvimento de scripts utilitários
 
-- ### **Exemplos :**
+### **Exemplos :**
 - #### **- Calculadora de IMC**
 Este projeto é uma calculadora de Índice de Massa Corporal (IMC) desenvolvida em Python. Ele permite a inserção de peso e altura, realiza o cálculo do IMC e categoriza o resultado em diferentes faixas de peso. Principais características:
 - Estruturas condicionais para categorizar o IMC.
