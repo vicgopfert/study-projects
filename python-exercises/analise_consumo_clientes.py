@@ -1,6 +1,6 @@
 def pesquisa_preferencia_clientes():
     # Declaração de variáveis
-    clientes = 5
+    clientes = 45 # Quantidade de clientes a serem entrevistados
     idades = [0] * clientes
     sexos = [0] * clientes
     pratos_principais = [0] * clientes
