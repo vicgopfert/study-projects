@@ -24,7 +24,11 @@ Uma série de exercícios voltados para aprimorar minhas habilidades em Python, 
     - Menu interativo.
     - Funções para manipulação de tarefas e controle de fluxo.
 
----
+- **🔹 Sistema Bancário com Login e Senha**
+  - Um sistema bancário básico desenvolvido em Python, permitindo cadastro de usuários, login e operações como depósitos, saques e consultas de extrato.
+    - Estruturas de dados (dicionários) para armazenar informações de contas e transações.
+    - Sistema de cadastro e autenticação com senha de 4 dígitos.
+    - Funções para manipulação de saldo, limite de saques e exibição de extratos bancários.
 
 ### 2. **[Mini Projetos em C](c-language/)**
 Projetos desenvolvidos em C, focados na aplicação de estruturas básicas e algoritmos.
