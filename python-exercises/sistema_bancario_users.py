@@ -1,7 +1,8 @@
 """
 ## Descrição do Projeto
 
-Este projeto é um sistema bancário simples, desenvolvido em Python, que permite a criação de contas, realização de depósitos, saques e transferências, com funcionalidades adicionais de login e verificação de senha para operações. Ele foi implementado usando os seguintes métodos e técnicas de programação:
+Este projeto é um sistema bancário simples, desenvolvido em Python, que permite a criação de contas, realização de depósitos, saques e transferências, com funcionalidades 
+adicionais de login e verificação de senha para operações. Ele foi implementado usando os seguintes métodos e técnicas de programação:
 
 - Manipulação de Strings e Listas: para armazenamento e verificação de dados de usuários e contas.
 - Estruturas de Controle: como loops e condicionais para navegação e controle do fluxo do programa.
