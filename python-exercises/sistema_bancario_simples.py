@@ -1,14 +1,11 @@
 """ 
 ========== DESAFIO SISTEMA BANCÁRIO SIMPLES =========
 
-1. Não é necessário cadastro ou senha.                                       OK
-2. O sistema deve permitir 3 saques diários com limite máximo de R$500,00
-por saque.                                                                   OK
-3. Mensagem de saldo insuficiente caso não haja para realizar saques.        OK
-4. Todos os depósitos saques em uma variável para cada um 
-e exibidos na operação de extrato.                                           OK
-5. O saldo atual deve ser exibido após a listagem de extratos,
-utilizando o formato R$ xxx.xx, exemplo: 1500.45 == R$ 1500.45               OK
+1. Não é necessário cadastro ou senha.                                       
+2. O sistema deve permitir 3 saques diários com limite máximo de R$500,00 por saque.                                                                   
+3. Mensagem de saldo insuficiente caso não haja para realizar saques.        
+4. Todos os depósitos saques em uma variável para cada um e exibidos na operação de extrato.                                           
+5. O saldo atual deve ser exibido após a listagem de extratos, utilizando o formato R$ xxx.xx, exemplo: 1500.45 == R$ 1500.45               
 
 =====================================================
 
