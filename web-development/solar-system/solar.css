@@ -1,57 +1,57 @@
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
 }
 .container {
     font-size: 10px;
-    width: 60em; 
-    height: 60em; 
-    position: relative;
+    width: 40em;
+    height: 40em;
+    position: relative;   
 }
 .sun {
     position: absolute;
-    top: 25em; 
-    left: 25em; 
+    top: 15em;
+    left: 15em;
     width: 10em;
     height: 10em;
     background-color: yellow;
     border-radius: 50%;
-    box-shadow: 0 0 3em white;
+    box-shadow: 0 0 3em 
+    white;    
 }
-.earth, .moon, .mars {
+.earth, .moon {
     position: absolute;
     border-style: solid;
-    border-color: white transparent transparent transparent;
-    border-width: 0.1em 0.1em 0 0;
-    border-radius: 50%;
+    border-color: white
+            transparent
+            transparent
+            transparent;
+        border-width: 0.1em 0.1em 0 0;
+        border-radius: 50%;
 }
 .earth {
-    top: 10em;
-    left: 10em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
-    animation: orbit 36.5s linear infinite;
+    animation: orbit 36.5s
+            linear infinite;
 }
 .moon {
     top: 0;
     right: 0;
     width: 8em;
     height: 8em;
-    animation: orbit 2.7s linear infinite;
+    animation: orbit 2.7s
+            linear infinite;
 }
-.mars {
-    top: 2em; 
-    left: 2em; 
-    width: 50em; 
-    height: 50em; 
-    animation: orbit 68.7s linear infinite;
-}
-.earth::before, .moon::before, .mars::before {
+.earth::before,
+.moon::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -69,13 +69,6 @@ body {
     width: 1.2em;
     height: 1.2em;
     background-color: silver;
-}
-.mars::before {
-    top: 24em; 
-    right: 24em; 
-    width: 2em;
-    height: 2em;
-    background-color: red;
 }
 @keyframes orbit {
     to {
