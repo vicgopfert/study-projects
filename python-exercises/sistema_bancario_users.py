@@ -16,15 +16,6 @@ O objetivo do projeto é oferecer um exemplo prático e didático para iniciante
 import datetime
 
 def registrar_usuario(users):
-    """
-    Função para registrar um novo usuário.
-
-    Parâmetros:
-    - users (dict): Dicionário contendo todos os usuários cadastrados.
-
-    Retorna:
-    - None
-    """
     print("\n==== Cadastro de Usuário ====")
     while True:
         username = input("Digite um nome de usuário: ").strip().lower()
@@ -36,7 +27,7 @@ def registrar_usuario(users):
             break
 
     while True:
-        senha = int(input("Digite uma senha de 4 dígitos: ")).strip()
+        senha = input("Digite uma senha de 4 dígitos: ").strip()
         if not senha.isdigit() or len(senha) != 4:
             print("Senha inválida. A senha deve conter exatamente 4 dígitos numéricos.")
         else:
@@ -56,23 +47,13 @@ def registrar_usuario(users):
     print(f"Usuário '{username}' registrado com sucesso!\n")
 
 def login_usuario(users):
-    """
-    Função para realizar o login de um usuário existente.
-
-    Parâmetros:
-    - users (dict): Dicionário contendo todos os usuários cadastrados.
-
-    Retorna:
-    - username (str): Nome de usuário logado.
-    - user_data (dict): Dados do usuário logado.
-    """
     print("\n==== Login de Usuário ====")
     username = input("Digite seu nome de usuário: ").strip().lower()
     if username not in users:
         print("Nome de usuário não encontrado. Por favor, registre-se primeiro.\n")
         return None, None
 
-    senha = int(input("Digite sua senha de 4 dígitos: ")).strip()
+    senha = input("Digite sua senha de 4 dígitos: ").strip()
     if users[username]['senha'] != senha:
         print("Senha incorreta. Tente novamente.\n")
         return None, None
@@ -81,15 +62,6 @@ def login_usuario(users):
     return username, users[username]
 
 def banco_deposito(user_data):
-    """
-    Função para realizar depósitos na conta do usuário.
-
-    Parâmetros:
-    - user_data (dict): Dados do usuário logado.
-
-    Retorna:
-    - None
-    """
     try:
         deposit = float(input("Digite o valor de Depósito: R$"))
     except ValueError:
@@ -102,7 +74,6 @@ def banco_deposito(user_data):
         user_data['saldo'] += deposit  # Atualiza o saldo
         user_data['cont_extratos'] += 1  # Incrementa o contador de extratos
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        # Cria um dicionário representando o extrato da transação
         new_extrato = {
             "id": user_data['cont_extratos'],
             "tipo": "Depósito",
@@ -114,28 +85,17 @@ def banco_deposito(user_data):
         print(f"Depósito realizado com sucesso! Saldo Atual: R${user_data['saldo']:.2f}\n")
 
 def banco_saque(user_data):
-    """
-    Função para realizar saques da conta do usuário.
-
-    Parâmetros:
-    - user_data (dict): Dados do usuário logado.
-
-    Retorna:
-    - None
-    """
     try:
-        saque = float(input(f"Digite o valor de Saque (Máximo por saque: R$500 | Saques Restantes: {user_data['limite_saque']}) : R$"))
+        saque = float(input(f"Digite o valor de Saque (Máximo por saque: R$500 | Saques Restantes: {user_data['limite_saque']}): R$"))
     except ValueError:
         print("Entrada inválida. Por favor, insira um número válido.")
         return
 
-    # Verifica se a data atual mudou para resetar o limite de saques
     hoje = datetime.datetime.now().date()
     if hoje != user_data['ultima_data']:
         user_data['limite_saque'] = user_data['limite_saque_total']
         user_data['ultima_data'] = hoje
 
-    # Validações do saque
     if saque <= 0:
         print("Valor de Saque Inválido.")
     elif saque > 500:
@@ -149,7 +109,6 @@ def banco_saque(user_data):
         user_data['limite_saque'] -= 1  # Decrementa o número de saques restantes
         user_data['cont_extratos'] += 1  # Incrementa o contador de extratos
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        # Cria um dicionário representando o extrato da transação
         new_extrato = {
             "id": user_data['cont_extratos'],
             "tipo": "Saque",
@@ -160,15 +119,6 @@ def banco_saque(user_data):
         print(f"Saque realizado com sucesso! Saldo Atual: R${user_data['saldo']:.2f}\n")
 
 def banco_extrato(user_data):
-    """
-    Função para exibir o extrato de transações da conta do usuário.
-
-    Parâmetros:
-    - user_data (dict): Dados do usuário logado.
-
-    Retorna:
-    - None
-    """
     if not user_data['extratos']:
         print("\nNão há extratos no momento.\n")
     else:
@@ -178,17 +128,13 @@ def banco_extrato(user_data):
         print()  # Linha em branco para melhor formatação
 
 def main():
-    """
-    Função principal que executa o sistema bancário.
-    """
-    users = {}  # Dicionário para armazenar os usuários cadastrados
-    username_logado = None  # Nome do usuário logado
-    user_data_logado = None  # Dados do usuário logado
+    users = {}
+    username_logado = None
+    user_data_logado = None
 
     while True:
         if not username_logado:
-            # Menu inicial para cadastro e login
-            print("""
+            print("""\n
     ========== SISTEMA BANCÁRIO ==========
     1: Registrar
     2: Login
@@ -210,8 +156,7 @@ def main():
             else:
                 print("Opção Inválida. Tente novamente.\n")
         else:
-            # Menu de operações para o usuário logado
-            print(f"""
+            print(f"""\n
     ========== SISTEMA BANCÁRIO ==========
     Usuário: {username_logado}
     Saldo Atual = R${user_data_logado['saldo']:.2f}
@@ -241,5 +186,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
