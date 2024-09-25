@@ -73,7 +73,7 @@ def banco_deposito(user_data):
     else:
         user_data['saldo'] += deposit  # Atualiza o saldo
         user_data['cont_extratos'] += 1  # Incrementa o contador de extratos
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         new_extrato = {
             "id": user_data['cont_extratos'],
             "tipo": "Depósito",
@@ -108,7 +108,7 @@ def banco_saque(user_data):
         user_data['saldo'] -= saque  # Atualiza o saldo
         user_data['limite_saque'] -= 1  # Decrementa o número de saques restantes
         user_data['cont_extratos'] += 1  # Incrementa o contador de extratos
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         new_extrato = {
             "id": user_data['cont_extratos'],
             "tipo": "Saque",
